@@ -72,7 +72,7 @@ def list_accounts():
     accounts = Account.all()
     # create a list of serialize() accounts
     account_list = [account.serialize() for account in accounts]
-    # log the number of accounts being returned in the list 
+    # log the number of accounts being returned in the list
     app.logger.info("Number of  Accounts is [%s]", len(account_list))
     # return the list with a return code of status.HTTP_200_OK
     return jsonify(account_list), status.HTTP_200_OK
